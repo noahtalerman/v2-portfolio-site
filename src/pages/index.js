@@ -1,3 +1,13 @@
-import React from "react"
+import React from 'react'
+import IntroSection from '../components/intro-section/intro-section.js'
+import Layout from '../components/layout/layout.js'
 
-export default () => <div>Hello world!</div>
+const Page = () => {
+    return (
+        <Layout>
+            <IntroSection />
+        </Layout>
+    );
+}
+
+export default Page
