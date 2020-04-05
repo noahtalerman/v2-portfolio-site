@@ -1,0 +1,136 @@
+@import '../layout/layout.module.scss';
+
+// .copy-right {
+//     width: 100%;
+//     display: flex;
+//     justify-content: flex-start;
+//     font-size: 12px;
+// }
+
+.intro-paragraph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+        font-size: 16px;
+        color: $black;
+        font-weight: 400;
+        margin: 0;
+        padding-bottom: 24px;
+    }
+}
+
+.nav-container-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 44px;
+}
+
+.small-link {
+    color: $black;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 540px;
+}
+
+.big-link {
+    color: $black;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+}
+
+.intro-section-collapsed {
+    flex-direction: column;
+
+    .nav-container-outer {
+        align-items: center;
+    }
+
+    .nav-container {
+        width: auto;
+    }
+
+    .intro-paragraph-container {
+        p {
+            opacity: 0;
+            width: 540px;
+        }
+    }
+}
+
+.intro-section-container {
+    font-family: 'DM Sans', sans-serif;
+    background-color: $white;
+    box-shadow: 4px 0px 4px $black-shadow;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 660px;
+    width: 93vw;
+}
+
+.intro-section-container-collapsed { 
+    width: 320px;
+
+    // .copy-right {
+    //     justify-content: center;
+    // }
+}
+
+@include desktop {
+    .small-link {
+        font-size: 24px;
+        padding-bottom: 24px;
+    }
+
+    .big-link {
+        font-size: 32px;
+        padding-bottom: 44px;
+    }
+
+    .intro-section-container-collapsed {
+        width: 320px;  
+    }
+}
+
+@include laptop {
+    .small-link {
+        font-size: 18px;
+        padding-bottom: 16px;
+    }
+
+    .big-link {
+        font-size: 24px;
+        padding-bottom: 32px;
+    }
+
+    .intro-section-container-collapsed {
+        width: 260px;  
+    }
+}
+
+@include tablet {
+
+}
+
+@include phone {
+
+}
