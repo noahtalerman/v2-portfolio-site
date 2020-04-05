@@ -34,7 +34,7 @@ $laptop-max: 1300px;
     }
 }
 
-body, h1, h2, h3, p, button, a, div, section {
+body, h1, h2, h3, h4, p, button, a, div, section {
     margin: 0;
 }
 
@@ -43,6 +43,6 @@ body {
     width: 100vw;
 }
 
-.article {
+.container {
     display: flex;
 }

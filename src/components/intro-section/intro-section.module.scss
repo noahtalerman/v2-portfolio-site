@@ -32,7 +32,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 44px;
 }
 
 .small-link {
@@ -85,6 +84,10 @@
     height: 100vh;
     min-height: 660px;
     width: 93vw;
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
 }
 
 .intro-section-container-collapsed { 
@@ -109,6 +112,10 @@
     .intro-section-container-collapsed {
         width: 320px;  
     }
+
+    .nav-container-outer {
+        padding-bottom: 44px;
+    }
 }
 
 @include laptop {
@@ -124,6 +131,10 @@
 
     .intro-section-container-collapsed {
         width: 260px;  
+    }
+
+    .nav-container-outer {
+        padding-bottom: 32px;
     }
 }
 

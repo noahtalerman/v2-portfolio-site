@@ -1,0 +1,34 @@
+@import '../layout/layout.module.scss';
+
+.sidebar-container {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 138px;
+    padding: 0 0 0 34px;
+}
+
+.header {
+    font-family: $dm-sans;
+    font-weight: 700;
+    font-size: 18px;
+    color: $grey-text;
+    padding-bottom: 16px;
+}
+
+.sub-header {
+    font-family: $dm-sans;
+    font-weight: 700;
+    font-size: 16px;
+    color: $grey-text;
+}
+
+.paragraph {
+    font-family: $dm-sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: $grey-text;
+    padding-bottom: 10px;
+}

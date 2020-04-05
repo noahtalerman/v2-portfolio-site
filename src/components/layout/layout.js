@@ -3,9 +3,9 @@ import layoutStyles from './layout.module.scss'
 
 const Layout = (props) => {
     return (
-        <article className={layoutStyles.article}>
+        <div className={layoutStyles.container}>
             {props.children}
-        </article>
+        </div>
     );
 }
 

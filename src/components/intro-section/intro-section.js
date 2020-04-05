@@ -42,14 +42,14 @@ const IntroSection = (props) => {
     }
 
     return (
-        <div className={container}>
+        <header className={container}>
             <div className={section}>
-                <div className={introSectionStyles.navContainerOuter}>
+                <nav className={introSectionStyles.navContainerOuter}>
                     <Navigation />
-                </div>
+                </nav>
                 <IntroParagraphs />
             </div>
-        </div>
+        </header>
     );
 }
 

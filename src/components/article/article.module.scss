@@ -1,0 +1,32 @@
+@import '../layout/layout.module.scss';
+
+.article {
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    border-radius: 8px;
+    margin-top: 34px;
+    height: 1200px;
+}
+
+@include desktop {
+    .article {
+        width: 720px;
+    }
+}
+
+@include laptop {
+    .article {
+        width: 594px;
+    }
+}
+
+@include tablet {
+    
+}
+
+@include phone {
+    
+}

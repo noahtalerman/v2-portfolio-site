@@ -1,0 +1,44 @@
+@import '../layout/layout.module.scss';
+
+.main {
+    display: grid;
+    grid-template-columns: [first] 20vw [second] 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "header article"
+        "sidebar article";
+    flex-grow: 1;
+    justify-content: first start;
+    align-items: flex-start;
+}
+
+.main-header {
+    grid-area: header;
+    font-family: $dm-sans;
+    font-weight: 400;
+    color: $grey-text;
+    padding: 34px 0 0 34px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+@include desktop {
+    .main-header {
+        font-size: 32px;
+    }
+}
+
+@include laptop {
+    .main-header {
+        font-size: 24px;
+    }
+}
+
+@include tablet {
+    
+}
+
+@include phone {
+    
+}
