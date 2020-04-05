@@ -7,9 +7,6 @@ const Page = () => {
     return (
         <Layout>
             <IntroSection />
-            <Main>
-
-            </Main>
         </Layout>
     );
 }
