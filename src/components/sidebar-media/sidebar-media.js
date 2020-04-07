@@ -1,5 +1,5 @@
 import React from 'react'
-import sidebarStyles from './sidebar-resume.module.scss'
+import sidebarStyles from './sidebar-media.module.scss'
 
 const Header = (props) => {
     return (
@@ -7,66 +7,58 @@ const Header = (props) => {
     );
 }
 
-const SubHeaderResume = (props) => {
+const SubHeader = (props) => {
     return (
-        <h4 className={sidebarStyles.subHeaderResume}>{props.text}</h4>
-    );
-}
-
-const SubHeaderMedia = (props) => {
-    return (
-        <h4 className={sidebarStyles.subHeaderMedia}>{props.text}</h4>
-    );
-}
-
-const ListResume = (props) => {
-    const listElements = React.Children.map(props.children, (child, i) => {
-        return (
-            <li className={sidebarStyles.listElementResume}>{child.props.children}</li>
-        );
-    });
-
-    return (
-        <ul className={sidebarStyles.listResume}>{listElements}</ul>
+        <h4 className={sidebarStyles.subHeader}>{props.text}</h4>
     );
 }
 
 const ListTracks = (props) => {
-    const listElements = React.Children.map(props.children, (child, i) => {
+    const elements = props.children.split('+');
+    const listElements = elements.map((elem, i) => {
         return (
-            <li className={sidebarStyles.listElementTracks}>
-                <a>{child.props.children}</a>
-            </li>
+            <li className={sidebarStyles.listElement} key={elem}>{i + 1}. {elem}<br></br></li>
         );
     });
 
     return (
-        <ol className={sidebarStyles.listResume}>{listElements}</ol>
+        <ul className={`${sidebarStyles.list} ${sidebarStyles.listTracks}`}>{listElements}</ul>
     );
 }
 
 const ListBooks = (props) => {
-    const listElements = React.Children.map(props.children, (child, i) => {
+    const elements = props.children.split('+');
+    const listElements = elements.map((elem, i) => {
+        console.log(i)
         return (
-            <li className={sidebarStyles.listElementBooks}>
-                <a>{child.props.children}</a>
-            </li>
+            <li className={sidebarStyles.listElement} key={elem}>{elem}<br></br></li>
         );
     });
 
     return (
-        <ul className={sidebarStyles.listResume}>{listElements}</ul>
+        <ul className={`${sidebarStyles.list} ${sidebarStyles.listBooks}`}>{listElements}</ul>
     );
 }
 
 const SidebarMedia = (props) => {
-    const elements = React.Children.map(props.children, (child, i) => {
-        
-    });
+    const date = new Date();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    let pastWeek = new Date()
+    pastWeek.setDate(pastWeek.getDate() - 7);
+    const pastMonth = pastWeek.getMonth() + 1;
+    const pastDay = pastWeek.getDate();
 
     return (
         <div className={sidebarStyles.sidebarContainer}>
-            {elements}
+            <Header text='Top Tracks' />
+            <SubHeader text={`${pastMonth} / ${pastDay} - ${month} / ${day}`} />
+            <ListTracks>
+                Alone Again+
+                Snowchild+
+                It Is Not Meant To Be
+            </ListTracks>
         </div>
     );
 }

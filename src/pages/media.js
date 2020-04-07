@@ -3,12 +3,14 @@ import IntroSection from '../components/intro-section/intro-section.js'
 import Layout from '../components/layout/layout.js'
 import Main from '../components/main/main.js'
 import Article from '../components/article/article.js'
+import SidebarMedia from '../components/sidebar-media/sidebar-media.js'
 
 const Page = () => {
     return (
         <Layout>
             <IntroSection collapsed="collapsed" />
             <Main location="Media">
+                <SidebarMedia />
                 <Article>
                     <p>Media</p>
                 </Article>

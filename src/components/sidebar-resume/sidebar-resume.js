@@ -1,5 +1,6 @@
 import React from 'react'
 import sidebarStyles from './sidebar-resume.module.scss'
+import { Link } from 'gatsby';
 
 const Header = (props) => {
     return (
@@ -7,66 +8,63 @@ const Header = (props) => {
     );
 }
 
-const SubHeaderResume = (props) => {
+const SubHeader = (props) => {
     return (
-        <h4 className={sidebarStyles.subHeaderResume}>{props.text}</h4>
+        <h4 className={sidebarStyles.subHeader}>{props.text}</h4>
     );
 }
 
-const SubHeaderMedia = (props) => {
-    return (
-        <h4 className={sidebarStyles.subHeaderMedia}>{props.text}</h4>
-    );
-}
-
-const ListResume = (props) => {
-    const listElements = React.Children.map(props.children, (child, i) => {
+const List = (props) => {
+    const elements = props.children.split('+');
+    const listElements = elements.map((elem) => {
         return (
-            <li className={sidebarStyles.listElementResume}>{child.props.children}</li>
+            <li className={sidebarStyles.listElement} key={elem}>{elem}<br></br></li>
         );
     });
 
     return (
-        <ul className={sidebarStyles.listResume}>{listElements}</ul>
-    );
-}
-
-const ListTracks = (props) => {
-    const listElements = React.Children.map(props.children, (child, i) => {
-        return (
-            <li className={sidebarStyles.listElementTracks}>
-                <a>{child.props.children}</a>
-            </li>
-        );
-    });
-
-    return (
-        <ol className={sidebarStyles.listResume}>{listElements}</ol>
-    );
-}
-
-const ListBooks = (props) => {
-    const listElements = React.Children.map(props.children, (child, i) => {
-        return (
-            <li className={sidebarStyles.listElementBooks}>
-                <a>{child.props.children}</a>
-            </li>
-        );
-    });
-
-    return (
-        <ul className={sidebarStyles.listResume}>{listElements}</ul>
+        <ul className={sidebarStyles.list}>{listElements}</ul>
     );
 }
 
 const SidebarResume = (props) => {
-    const elements = React.Children.map(props.children, (child, i) => {
-       
-    });
 
     return (
         <div className={sidebarStyles.sidebarContainer}>
-            {elements}
+            <Header text='Contact' />
+            <SubHeader text='Email' />
+            <List>
+                noahtal@umich.edu
+            </List>
+            <SubHeader text='Phone' />
+            <List>
+                206.617.2332
+            </List>
+            <SubHeader text='Location' />
+            <List>
+                Seattle, Washington
+            </List>
+            <Header text='Tools / Skills' />
+            <List>
+            HTML / CSS+
+            JavaScript+
+            ReactJS+
+            GatsbyJS+
+            Ruby+
+            Python
+            </List>
+            <List>
+            Figma+
+            Adobe XD+
+            Adobe Photoshop+
+            Facebook Business
+            </List>
+            <List>
+            Data Analysis+
+            Digital Marketing+
+            Wireframing+
+            Prototyping
+            </List>
         </div>
     );
 }

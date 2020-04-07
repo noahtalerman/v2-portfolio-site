@@ -1,0 +1,101 @@
+@import '../layout/layout.module.scss';
+
+.sidebar-container {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    padding: 0 0 0 34px;
+}
+
+.header {
+    color: $grey-text;
+    font-family: $dm-sans;
+    font-weight: 700;
+}
+
+.sub-header {
+    color: $grey-text;
+    font-family: $dm-sans;    
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.list-element {
+    color: $grey-text;
+    font-family: $dm-sans;
+    font-weight: 400;
+    
+}
+
+.list-tracks {
+    list-style: none;
+}
+
+@include desktop {
+    .sidebar-container {
+        top: 76px;
+    }
+
+    .header:first-child {
+        padding: 72px 0 12px 0;
+    }
+
+    .header {
+        font-size: 24px;
+        padding: 44px 0 16px 0;
+    }
+
+    .sub-header {
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .list {
+        padding-bottom: 12px;
+    }
+
+    .list-element {
+        font-size: 16px;
+    }
+}
+
+@include laptop {
+    .sidebar-container {
+        top: 65px;
+    }
+
+    .header:first-child {
+        padding: 32px 0 12px 0;
+    }
+
+    .header {
+        font-size: 18px;
+        padding: 32px 0 12px 0;
+    }
+
+    .sub-header {
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .list {
+        padding-bottom: 10px;
+    }
+
+    .list-element {
+        font-size: 16px;
+    }
+}
+
+@include tablet {
+    
+}
+
+@include phone {
+    
+}

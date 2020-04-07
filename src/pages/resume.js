@@ -10,9 +10,7 @@ const Page = () => {
         <Layout>
             <IntroSection collapsed="collapsed" />
             <Main location="Resume">
-                <SidebarResume>
-
-                </SidebarResume>
+                <SidebarResume />
                 <Article>
                     <p>resume</p>
                 </Article>
