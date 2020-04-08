@@ -36,6 +36,7 @@
 @include desktop {
     .sidebar-container {
         top: 76px;
+        width: 175px;
     }
 
     .header:first-child {
@@ -44,7 +45,7 @@
 
     .header {
         font-size: 24px;
-        padding: 44px 0 16px 0;
+        padding: 34px 0 16px 0;
     }
 
     .sub-header {
@@ -64,6 +65,7 @@
 @include laptop {
     .sidebar-container {
         top: 65px;
+        width: 160px;
     }
 
     .header:first-child {

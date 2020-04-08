@@ -90,14 +90,6 @@
     top: 0;
 }
 
-.intro-section-container-collapsed { 
-    width: 320px;
-
-    // .copy-right {
-    //     justify-content: center;
-    // }
-}
-
 @include desktop {
     .small-link {
         font-size: 24px;

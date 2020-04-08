@@ -17,22 +17,40 @@ const ListTracks = (props) => {
     const elements = props.children.split('+');
     const listElements = elements.map((elem, i) => {
         return (
-            <li className={sidebarStyles.listElement} key={elem}>{i + 1}. {elem}<br></br></li>
+            <li className={sidebarStyles.listElement} key={elem}>
+                <a className={sidebarStyles.listLink}>{elem}</a>
+                <br></br>
+            </li>
         );
     });
 
     return (
-        <ul className={`${sidebarStyles.list} ${sidebarStyles.listTracks}`}>{listElements}</ul>
+        <ol className={`${sidebarStyles.list} ${sidebarStyles.listTracks}`}>{listElements}</ol>
     );
 }
 
 const ListBooks = (props) => {
     const elements = props.children.split('+');
     const listElements = elements.map((elem, i) => {
-        console.log(i)
-        return (
-            <li className={sidebarStyles.listElement} key={elem}>{elem}<br></br></li>
-        );
+        const bookInfo = elem.split('*');
+        let title = bookInfo[0];
+        const author = bookInfo[1];
+        if (title.indexOf('✓') !== -1) {
+            title = title.replace('✓', '');
+            return (
+                <li className={`${sidebarStyles.listElement} ${sidebarStyles.listBooksRead}`} key={elem}>
+                    <a className={sidebarStyles.listLink}>{title}</a>{author}
+                    <br></br>
+                </li>
+            );
+        } else {
+            return (
+                <li className={sidebarStyles.listElement} key={elem}>
+                    <a className={sidebarStyles.listLink}>{title}</a>{author}
+                    <br></br>
+                </li>
+            );
+        }
     });
 
     return (
@@ -59,6 +77,16 @@ const SidebarMedia = (props) => {
                 Snowchild+
                 It Is Not Meant To Be
             </ListTracks>
+            <Header text='Reading List' />
+            <SubHeader text='Updated 4 / 8' />
+            <ListBooks>
+                Hooked * by Nir Eyal and Ryan Hoover+
+                Misbehaving * by Richard Thaler+
+                ✓The Design of Everday Things *
+                by Don Norman+
+                ✓Thinking, Fast and Slow * by Daniel Kahneman+
+                ✓Nudge * by Richard Thaler
+            </ListBooks>
         </div>
     );
 }
