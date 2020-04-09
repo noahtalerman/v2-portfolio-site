@@ -1,0 +1,81 @@
+@import '../layout/layout.module.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 42px 46px 42px;
+}
+
+.header {
+    font-family: $dm-sans;
+    color: $black;
+    font-weight: 700;
+}
+
+.small-header-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link {
+    font-family: $dm-sans;
+    color: $black;
+    font-weight: 400;
+}
+
+.small-header {
+    font-family: $dm-sans;
+    color: $black;
+    font-weight: 400;
+    font-size: 16px;
+    display: inline;
+}
+
+.body {
+    font-family: $dm-sans;
+    color: $black;
+    font-weight: 400;
+}
+
+@include desktop {
+
+    .header {
+        font-size: 24px;
+        margin: 46px 0 6px 0;
+    }
+
+    .small-header-container {
+        margin-top: 6px;
+    }
+
+    .body {
+        margin-top: 6px;
+        line-height: 24px;
+    }
+
+}
+
+@include laptop {
+
+    .header {
+        font-size: 18px;
+        margin: 46px 0 6px 0;
+    }
+
+    .small-header-container {
+        margin-top: 6px;
+    }
+
+    .body {
+        margin-top: 6px;
+    }
+    
+}
+
+@include tablet {
+    
+}
+
+@include phone {
+    
+}
