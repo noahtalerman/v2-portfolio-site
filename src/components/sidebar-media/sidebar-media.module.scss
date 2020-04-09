@@ -56,6 +56,14 @@
 
     .books-container {
         background-color: $white;
+        overflow-y: auto;
+        margin: 32px 0;
+        padding: 12px 12px;
+        border-radius: 8px;
+    }
+
+    .tracks-container {
+        padding: 0 12px;
     }
 }
 
@@ -63,9 +71,14 @@
     .sidebar-container {
         top: 76px;
         width: 175px;
+        max-height: calc(100vh - 76px);
     }
 
     .tracks-container {
+        margin-top: 44px;
+    }
+
+    .books-container {
         margin-top: 44px;
     }
 
@@ -94,6 +107,7 @@
     .sidebar-container {
         top: 65px;
         width: 160px;
+        max-height: calc(100vh - 65px);
     }
 
     .books-container {

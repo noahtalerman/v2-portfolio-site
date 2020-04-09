@@ -4,6 +4,7 @@ import Layout from '../components/layout/layout.js'
 import Main from '../components/main/main.js'
 import Article from '../components/article/article.js'
 import SidebarResume from '../components/sidebar-resume/sidebar-resume.js'
+import ResumePage from '../components/resume-page/resume-page.js'
 
 const Page = () => {
     return (
@@ -12,7 +13,7 @@ const Page = () => {
             <Main location="Resume">
                 <SidebarResume />
                 <Article>
-                    <p>resume</p>
+                    <ResumePage />
                 </Article>
             </Main>
         </Layout>

@@ -82,12 +82,17 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    min-height: 660px;
     width: 93vw;
     overflow: hidden;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+}
+
+@media (max-height: 600px) {
+    .intro-paragraph-container {
+        display: none;
+    }
 }
 
 @include desktop {

@@ -31,40 +31,36 @@ const SidebarResume = (props) => {
 
     return (
         <div className={sidebarStyles.sidebarContainer}>
-            <Header text='Contact' />
-            <SubHeader text='Email' />
-            <List>
-                noahtal@umich.edu
-            </List>
-            <SubHeader text='Phone' />
-            <List>
-                206.617.2332
-            </List>
-            <SubHeader text='Location' />
-            <List>
-                Seattle, Washington
-            </List>
-            <Header text='Tools / Skills' />
-            <List>
-            HTML / CSS+
-            JavaScript+
-            ReactJS+
-            GatsbyJS+
-            Ruby+
-            Python
-            </List>
-            <List>
-            Figma+
-            Adobe XD+
-            Adobe Photoshop+
-            Facebook Business
-            </List>
-            <List>
-            Data Analysis+
-            Digital Marketing+
-            Wireframing+
-            Prototyping
-            </List>
+            <div className={sidebarStyles.contactContainer}>
+                <Header text='Contact' />
+                <SubHeader text='Email' />
+                <List>
+                    noahtal@umich.edu
+                </List>
+                <SubHeader text='Phone' />
+                <List>
+                    206.617.2332
+                </List>
+                <SubHeader text='Location' />
+                <List>
+                    Seattle, Washington
+                </List>
+            </div>
+            <div className={sidebarStyles.toolsContainer}>
+                <Header text='Tools / Skills' />
+                <List>
+                HTML / CSS+JavaScript+ReactJS+
+                GatsbyJS+Ruby+Python
+                </List>
+                <List>
+                Figma+Adobe XD+Adobe Photoshop+
+                Facebook Business
+                </List>
+                <List>
+                Data Analysis+Digital Marketing+
+                Wireframing+Prototyping
+                </List>
+            </div>
         </div>
     );
 }
