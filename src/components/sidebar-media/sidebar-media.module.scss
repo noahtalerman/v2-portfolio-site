@@ -9,6 +9,15 @@
     padding: 0 0 0 34px;
 }
 
+.sidebar-container-scroll {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    padding: 0 0 0 34px;
+}
+
 .header {
     color: $grey-text;
     font-family: $dm-sans;

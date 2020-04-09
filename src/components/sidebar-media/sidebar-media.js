@@ -1,19 +1,22 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import sidebarStyles from './sidebar-media.module.scss'
 
 const Header = (props) => {
+
     return (
         <h3 className={sidebarStyles.header}>{props.text}</h3>
     );
 }
 
 const SubHeader = (props) => {
+
     return (
         <h4 className={sidebarStyles.subHeader}>{props.text}</h4>
     );
 }
 
 const ListTracks = (props) => {
+
     const elements = props.children.split('+');
     const listElements = elements.map((elem, i) => {
         return (
@@ -30,6 +33,7 @@ const ListTracks = (props) => {
 }
 
 const ListBooks = (props) => {
+
     const elements = props.children.split('+');
     const listElements = elements.map((elem, i) => {
         const bookInfo = elem.split('*');
@@ -58,7 +62,34 @@ const ListBooks = (props) => {
     );
 }
 
-const SidebarMedia = (props) => {
+const SidebarMedia = () => {
+
+    const[className, setClassName] = useState({
+        className: sidebarStyles.sidebarContainer
+    }) 
+
+    useEffect(() => {
+        function handleResize() {
+            const height = window.innerHeight;
+            if (height < 700) {
+                setClassName({
+                    className: sidebarStyles.sidebarContainerScroll,
+                })
+            } else {
+                setClassName({
+                    className: sidebarStyles.sidebarContainer,
+                })
+            }
+        } 
+        
+        window.addEventListener('resize', handleResize)
+        console.log('yo')
+
+        return _ => {
+            window.removeEventListener('resize', handleResize)
+        }
+    })
+
     const date = new Date();
     const month = date.getMonth() + 1;
     const day = date.getDate();
@@ -69,7 +100,7 @@ const SidebarMedia = (props) => {
     const pastDay = pastWeek.getDate();
 
     return (
-        <div className={sidebarStyles.sidebarContainer}>
+        <div className={className.className}>
             <Header text='Top Tracks' />
             <SubHeader text={`${pastMonth} / ${pastDay} - ${month} / ${day}`} />
             <ListTracks>
