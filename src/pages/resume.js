@@ -5,6 +5,7 @@ import Main from '../components/main/main.js'
 import Article from '../components/article/article.js'
 import SidebarResume from '../components/sidebar-resume/sidebar-resume.js'
 import ResumePage from '../components/resume-page/resume-page.js'
+import Button from '../components/button/button.js'
 
 const Page = () => {
     return (
@@ -12,6 +13,7 @@ const Page = () => {
             <IntroSection collapsed="collapsed" />
             <Main location="Resume">
                 <SidebarResume />
+                <Button content="Open PDF" right="right" />
                 <Article>
                     <ResumePage />
                 </Article>

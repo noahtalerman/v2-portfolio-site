@@ -1,0 +1,36 @@
+@import '../layout/layout.module.scss';
+
+.button {
+    font-family: $dm-sans;
+    color: $black;
+    background-color: $white;
+    padding: 5px 8px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 4px $black-shadow;
+    position: fixed;
+    text-decoration: underline;
+}
+
+@include desktop {
+
+    .button-right {
+        top: 25px;
+        right: 70px;
+    }
+}
+
+@include laptop {
+
+    .button-right {
+        top: 25px;
+        right: 30px;
+    }
+}
+
+@include tablet {
+    
+}
+
+@include phone {
+    
+}
