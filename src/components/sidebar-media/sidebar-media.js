@@ -64,31 +64,30 @@ const ListBooks = (props) => {
 
 const SidebarMedia = () => {
 
-    const[className, setClassName] = useState({
-        className: sidebarStyles.sidebarContainer
-    }) 
+    // const[className, setClassName] = useState({
+    //     className: sidebarStyles.sidebarContainer
+    // }) 
 
-    useEffect(() => {
-        function handleResize() {
-            const height = window.innerHeight;
-            if (height < 700) {
-                setClassName({
-                    className: sidebarStyles.sidebarContainerScroll,
-                })
-            } else {
-                setClassName({
-                    className: sidebarStyles.sidebarContainer,
-                })
-            }
-        } 
+    // useEffect(() => {
+    //     function handleResize() {
+    //         const height = window.innerHeight;
+    //         if (height < 700) {
+    //             setClassName({
+    //                 className: sidebarStyles.sidebarContainerScroll,
+    //             })
+    //         } else {
+    //             setClassName({
+    //                 className: sidebarStyles.sidebarContainer,
+    //             })
+    //         }
+    //     } 
         
-        window.addEventListener('resize', handleResize)
-        console.log('yo')
+    //     window.addEventListener('resize', handleResize)
 
-        return _ => {
-            window.removeEventListener('resize', handleResize)
-        }
-    })
+    //     return _ => {
+    //         window.removeEventListener('resize', handleResize)
+    //     }
+    // })
 
     const date = new Date();
     const month = date.getMonth() + 1;
@@ -100,24 +99,28 @@ const SidebarMedia = () => {
     const pastDay = pastWeek.getDate();
 
     return (
-        <div className={className.className}>
-            <Header text='Top Tracks' />
-            <SubHeader text={`${pastMonth} / ${pastDay} - ${month} / ${day}`} />
-            <ListTracks>
-                Alone Again+
-                Snowchild+
-                It Is Not Meant To Be
-            </ListTracks>
-            <Header text='Reading List' />
-            <SubHeader text='Updated 4 / 8' />
-            <ListBooks>
-                Hooked * by Nir Eyal and Ryan Hoover+
-                Misbehaving * by Richard Thaler+
-                ✓The Design of Everday Things *
-                by Don Norman+
-                ✓Thinking, Fast and Slow * by Daniel Kahneman+
-                ✓Nudge * by Richard Thaler
-            </ListBooks>
+        <div className={sidebarStyles.sidebarContainer}>
+            <div className={sidebarStyles.tracksContainer}>
+                <Header text='Top Tracks' />
+                <SubHeader text={`${pastMonth} / ${pastDay} - ${month} / ${day}`} />
+                <ListTracks>
+                    Alone Again+
+                    Snowchild+
+                    It Is Not Meant To Be
+                </ListTracks>
+            </div>
+            <div className={sidebarStyles.booksContainer}>
+                <Header text='Reading List' />
+                <SubHeader text='Updated 4 / 8' />
+                <ListBooks>
+                    Hooked * by Nir Eyal and Ryan Hoover+
+                    Misbehaving * by Richard Thaler+
+                    ✓The Design of Everday Things *
+                    by Don Norman+
+                    ✓Thinking, Fast and Slow * by Daniel Kahneman+
+                    ✓Nudge * by Richard Thaler
+                </ListBooks>  
+            </div>
         </div>
     );
 }
