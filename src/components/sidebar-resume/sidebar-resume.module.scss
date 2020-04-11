@@ -10,13 +10,13 @@
 }
 
 .header {
-    color: $grey-text;
+    color: $black;
     font-family: $dm-sans;
     font-weight: 700;
 }
 
 .sub-header {
-    color: $grey-text;
+    color: $black;
     font-family: $dm-sans;    
 }
 
@@ -26,7 +26,7 @@
 }
 
 .list-element {
-    color: $grey-text;
+    color: $black;
     font-family: $dm-sans;
     list-style: none;
     font-weight: 400;
@@ -72,6 +72,7 @@
     .sub-header {
         font-weight: 700;
         font-size: 16px;
+        margin: 0 0 6px 0;
     }
 
     .list {
@@ -106,6 +107,7 @@
     .sub-header {
         font-weight: 700;
         font-size: 16px;
+        margin: 0 0 6px 0;
     }
 
     .list {

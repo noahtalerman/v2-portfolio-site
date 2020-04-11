@@ -4,6 +4,7 @@ import Layout from '../components/layout/layout.js'
 import Main from '../components/main/main.js'
 import Article from '../components/article/article.js'
 import SidebarMedia from '../components/sidebar-media/sidebar-media.js'
+import MediaPage from '../components/media-page/media-page.js'
 
 const Page = () => {
     return (
@@ -12,7 +13,7 @@ const Page = () => {
             <Main location="Media">
                 <SidebarMedia />
                 <Article>
-                    <p>Media</p>
+                    <MediaPage />
                 </Article>
             </Main>
         </Layout>

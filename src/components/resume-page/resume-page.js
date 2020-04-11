@@ -19,10 +19,13 @@ const SmallHeader = (props) => {
             )
         } else if (i !== (elements.length - 1)) {
             return (
-                <h4 className={resumePageStyles.smallHeader} key={elem}>{` ${elem} / `} </h4>
+                <h4 className={resumePageStyles.smallHeader} key={elem}>&nbsp;{`${elem} /`} </h4>
+            )
+        } else if (elements.length > 1) {
+            return (
+                <h4 className={resumePageStyles.smallHeader} key={elem}>&nbsp;{`${elem}`}</h4>
             )
         } else {
-            console.log(i, elements.length)
             return (
                 <h4 className={resumePageStyles.smallHeader} key={elem}>{elem}</h4>
             )
@@ -41,9 +44,9 @@ const Body = (props) => {
 
 const Section = (props) => {
     return (
-        <div className={resumePageStyles.section}>
+        <section className={resumePageStyles.section}>
             {props.children}
-        </div>
+        </section>
     )
 }
 
