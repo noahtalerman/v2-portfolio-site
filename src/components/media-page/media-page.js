@@ -16,17 +16,34 @@ const ImageContainer = (props) => {
 }
 
 const MediaSection = () => {
-    const imgs = [{ url: {img1}, alt: 'alt' }, {url: {img2}, alt: 'alt' }, {url: {img3}, alt: 'alt' }, {url: {img4}, alt: 'alt' }, {url: {img5}, alt: 'alt' }, {url: {img6}, alt: 'alt' }];
-    const images = imgs.map((img, i) => {
-        const info = { url: img.url, imgAlt: img.alt}
-        console.log(info)
+    const imgs = [{ url: {img1}, alt: 'alt' }, 
+                  { url: {img2}, alt: 'alt' }, 
+                  { url: {img3}, alt: 'alt' }, 
+                  { url: {img4}, alt: 'alt' }, 
+                  { url: {img5}, alt: 'alt' }, 
+                  { url: {img6}, alt: 'alt' },
+                  { url: {img1}, alt: 'alt' }, 
+                  { url: {img2}, alt: 'alt' }, 
+                  { url: {img3}, alt: 'alt' }, 
+                  { url: {img4}, alt: 'alt' }, 
+                  { url: {img5}, alt: 'alt' }, 
+                  { url: {img6}, alt: 'alt' },
+                  { url: {img1}, alt: 'alt' }, 
+                  { url: {img2}, alt: 'alt' }, 
+                  { url: {img3}, alt: 'alt' }, 
+                  { url: {img4}, alt: 'alt' }, 
+                  { url: {img5}, alt: 'alt' }, 
+                  { url: {img6}, alt: 'alt' }];
+    const imageElems = imgs.map((img, i) => {
+        const key = Object.keys(img.url)[0]
+        const info = { url: img.url[key], imgAlt: img.alt}
         return (
-            <ImageContainer url={info.url} alt={info.imgAlt} />
+            <ImageContainer key={`${key}${i}`} url={info.url} alt={info.imgAlt} />
         )
     })
     return (
         <section className={mediaPageStyles.mediaSection}>
-            {images}
+            {imageElems}
         </section>
     )
 }
