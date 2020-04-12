@@ -15,7 +15,7 @@ const ImageContainer = (props) => {
     )
 }
 
-const MediaSection = () => {
+const Section = () => {
     const imgs = [{ url: {img1}, alt: 'alt' }, 
                   { url: {img2}, alt: 'alt' }, 
                   { url: {img3}, alt: 'alt' }, 
@@ -51,9 +51,9 @@ const MediaSection = () => {
 const MediaPage = () => {
     return (
         <div>
-            <MediaSection>
+            <Section>
 
-            </MediaSection>
+            </Section>
         </div>
     )
 }
