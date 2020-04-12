@@ -13,7 +13,7 @@ const Page = () => {
             <IntroSection collapsed="collapsed" />
             <Main location="Resume">
                 <SidebarResume />
-                <Button content="Open PDF" right="right" />
+                <Button content="Open PDF" text="text" right="right" />
                 <Article>
                     <ResumePage />
                 </Article>

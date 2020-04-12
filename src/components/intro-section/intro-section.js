@@ -2,14 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import introSectionStyles from './intro-section.module.scss'
 
-const CopyRight = () => {
-    return (
-        <div className={introSectionStyles.copyRight}>
-            <p>Noah Talerman 2020 &copy;</p>
-        </div>
-    );
-}
-
 const IntroParagraphs = () => {
     return (
         <div className={introSectionStyles.introParagraphContainer}>

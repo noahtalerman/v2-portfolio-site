@@ -14,7 +14,7 @@ const SmallHeader = (props) => {
             elem = elem.replace('_', '');
             return (
                 <h4 key={elem}>
-                    <a href=""className={resumePageStyles.link}>{elem}</a> /
+                    <a href={props.url} target="_blank" rel="noopener noreferrer" className={resumePageStyles.link}>{elem}</a> /
                 </h4>
             )
         } else if (i !== (elements.length - 1)) {
@@ -56,7 +56,7 @@ const ResumePage = () => {
 
             <Header text='Education' />
             <Section>
-                <SmallHeader>
+                <SmallHeader url='https://umich.edu/' >
                     _University of Michigan+B.S. Economics+
                     B.S. Cognitive Science+May 2020
                 </SmallHeader>
@@ -73,7 +73,7 @@ const ResumePage = () => {
 
             <Header text='Work Experience' />
             <Section>
-                <SmallHeader>
+                <SmallHeader url='https://wellnest.co' >
                     _Wellnest+Web Developer+Sept. 2019 to Present
                 </SmallHeader>
                 <SmallHeader>
@@ -85,7 +85,7 @@ const ResumePage = () => {
             </Section>
 
             <Section>
-                <SmallHeader>
+                <SmallHeader url='https://www.iprospect.com/en/us/' >
                     _iProspect+Account Management Intern+June to Aug. 2019
                 </SmallHeader>
                 <SmallHeader>
@@ -98,7 +98,7 @@ const ResumePage = () => {
             
             <Header text='Research Projects' />
             <Section>
-                <SmallHeader>
+                <SmallHeader url='https://www.figma.com/proto/q1BfyCnd97uBHmzEsdTRvW/Digital-Prototype-I?node-id=491%3A33901&scaling=min-zoom' >
                     _ChoreGroup+Course Project+Sept. to Dec. 2019
                 </SmallHeader>
                 <Body>
@@ -107,7 +107,7 @@ const ResumePage = () => {
             </Section>
             
             <Section>    
-                <SmallHeader>
+                <SmallHeader url='https://columbiaeconomicreview.com'>
                     _Economic Research+Course Project+Sept. to Dec. 2019
                 </SmallHeader>
                 <Body>

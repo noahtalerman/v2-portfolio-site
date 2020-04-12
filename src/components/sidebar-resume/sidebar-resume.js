@@ -1,6 +1,5 @@
 import React from 'react'
 import sidebarStyles from './sidebar-resume.module.scss'
-import { Link } from 'gatsby';
 
 const Header = (props) => {
     return (

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import sidebarStyles from './sidebar-media.module.scss'
 
 const Header = (props) => {

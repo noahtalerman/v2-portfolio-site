@@ -9,9 +9,14 @@ const Button = (props) => {
     } else if (props.left) {
         className += ` ${buttonStyles.buttonLeft}`
     }
+    if (props.text) {
+        className += ` ${buttonStyles.buttonText}`
+    } else if (props.arrow) {
+        className += ` ${buttonStyles.buttonArrow}`
+    }
 
     return (
-        <a className={className} href={props.href}>{props.content}</a>
+        <a className={className} href={props.url}>{props.content}</a>
     )
 }
 
