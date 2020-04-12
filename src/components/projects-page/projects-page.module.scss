@@ -1,0 +1,70 @@
+@import '../layout/layout.module.scss';
+
+$wellnest-red: #F24E56;
+$wellnest-blue: #4F5C79;
+$chore-blue: #749BFF;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 46px;
+}
+
+.project-card {
+    width: 472px;
+    text-decoration: none;
+    margin-bottom: 60px;
+    border-radius: 0 0 8px 8px;
+    transition: box-shadow .2s linear;
+}
+
+.project-card:hover {
+    box-shadow: 2px 4px 4px $black-shadow;
+}
+
+.background {
+    height: 282px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 24px;
+}
+
+.background0 {
+    background-color: $wellnest-red;
+}
+
+.background1 {
+    background-color: $wellnest-blue;
+}
+
+.background2 {
+    background-color: $chore-blue;
+}
+
+.img {
+    height: 200px;
+    width: auto;
+}
+
+.project-card-text {
+    padding: 0 36px 24px 36px;
+}
+
+.header {
+    font-family: $dm-sans;
+    color: $black;
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: underline;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-family: $dm-sans;
+    color: $black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5em;
+}
