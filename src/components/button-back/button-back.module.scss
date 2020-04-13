@@ -1,0 +1,35 @@
+@import '../layout/layout.module.scss';
+
+.button {
+    font-family: $dm-sans;
+    color: $black;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 2px 4px 4px $black-shadow;
+    position: fixed;
+    padding: 0 12px;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+@include desktop {
+    .button {
+        top: 25px;
+        left: 564px;
+    }
+}
+
+@include laptop {
+    .button {
+        top: 25px;
+        left: 464px;
+    }
+}
+
+@include tablet {
+    
+}
+
+@include phone {
+    
+}
