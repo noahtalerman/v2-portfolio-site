@@ -10,7 +10,7 @@ const Title = (props) => {
 
 const BannerImg = (props) => {
     return (
-        <div>
+        <div className={reportPageStyles.bannerImg}>
             <img src={props.imgSrc} alt={props.imgAlt} />
         </div>
     );
@@ -67,11 +67,11 @@ const ReportPage = () => {
     })
 
     return (
-        <>
+        <div className={reportPageStyles.container}>
             <Title text='Project Title' />
             <BannerImg imgSrc={BannerImgWellnest} imgAlt='alt' />
             {sections}
-        </>
+        </div>
     );
 }
 

@@ -4,14 +4,14 @@ import Layout from '../../components/layout/layout.js'
 import Main from '../../components/main/main.js'
 import Article from '../../components/article/article.js'
 import ReportPage from '../../components/report-page/report-page.js'
-import Button from '../../components/button/button.js'
+import ButtonBack from '../../components/button-back/button-back.js'
 
 const Page = () => {
     return (
         <Layout>
             <IntroSection collapsed="collapsed" />
             <Main location="Projects wellnest-v2">
-                <Button url="/projects" content="<" arrow="arrow" left="left" />
+                <ButtonBack url="/projects" />
                 <Article>
                     <ReportPage />
                 </Article>

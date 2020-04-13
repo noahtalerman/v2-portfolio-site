@@ -1,5 +1,68 @@
 @import '../layout/layout.module.scss';
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
+    font-family: $dm-sans;
+    font-weight: 400;
+}
+
+.header {
+    font-family: $dm-sans;
+    font-weight: 400;
+}
+
+.body {
+    font-family: $dm-sans;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-size: 16px;
+}
+
+@include desktop {
+    .title {
+        font-size: 32px;
+        margin: 34px 32px;
+    }
+
+    .header {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .section {
+        margin-bottom: 24px;
+    }
+
+}
+
+@include laptop {
+    .title {
+        font-size: 24px;
+        margin: 26px 32px;
+    }
+
+    .header {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .banner-img {
+        margin-bottom: 24px;
+    }
+
+    .section {
+        margin: 0 32px 24px 32px;
+    }
+}
+
+@include tablet {
+    
+}
+
+@include phone {
     
 }
