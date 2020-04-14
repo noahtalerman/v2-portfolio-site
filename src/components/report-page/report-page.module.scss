@@ -34,6 +34,10 @@
     }
 
     .section {
+        margin: 0 32px 0 32px;
+    }
+
+    .body {
         margin-bottom: 24px;
     }
 
@@ -55,7 +59,11 @@
     }
 
     .section {
-        margin: 0 32px 24px 32px;
+        margin: 0 32px 0 32px;
+    }
+
+    .body {
+        margin-bottom: 24px;
     }
 }
 

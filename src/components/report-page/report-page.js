@@ -35,7 +35,7 @@ const ReportPage = () => {
         sections: [
             {
                 header: 'Problem',
-                body: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi eget suspendisse cursus eros, egestas sit ut. Sed velit blandit cursus lorem semper in. Nunc consectetur a at lectus pharetra sed massa aenean. Feugiat ac sapien sed nullam. Imperdiet pretium convallis aliquam a nisl sagittis risus. Id gravida dictum et blandit posuere viverra massa laoreet. Odio aliquet arcu interdum maecenas. Nisl risus neque, massa orci amet, at senectus feugiat sit. Etiam donec aliquam integer iaculis imperdiet amet, id fringilla. Mauris nibh cursus varius molestie. Amet, ipsum nibh varius imperdiet.']
+                body: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi eget suspendisse cursus eros, egestas sit ut. Sed velit blandit cursus lorem semper in. Nunc consectetur a at lectus pharetra sed massa aenean. Feugiat ac sapien sed nullam. Imperdiet pretium convallis aliquam a nisl sagittis risus. Id gravida dictum et blandit posuere viverra massa laoreet. Odio aliquet arcu interdum maecenas. Nisl risus neque, massa orci amet, at senectus feugiat sit. Etiam donec aliquam integer iaculis imperdiet amet, id fringilla. Mauris nibh cursus varius molestie. Amet, ipsum nibh varius imperdiet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi eget suspendisse cursus eros, egestas sit ut. Sed velit blandit cursus lorem semper in. Nunc consectetur a at lectus pharetra sed massa aenean. Feugiat ac sapien sed nullam. Imperdiet pretium convallis aliquam a nisl sagittis risus. Id gravida dictum et blandit posuere viverra massa laoreet. Odio aliquet arcu interdum maecenas. Nisl risus neque, massa orci amet, at senectus feugiat sit. Etiam donec aliquam integer iaculis imperdiet amet, id fringilla. Mauris nibh cursus varius molestie. Amet, ipsum nibh varius imperdiet.']
             },
             {
                 header: 'Solution',
@@ -50,6 +50,7 @@ const ReportPage = () => {
     };
 
     const sections = Object.keys(project.sections).map((key, i) => {
+        console.log(project.sections[key])
         const bodies = project.sections[key].body.map((paragraph, i) => {
             return (
                 <Body className={reportPageStyles.body} text={paragraph} />
